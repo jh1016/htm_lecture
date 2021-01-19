@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>남성 신발 스포츠별 러닝 전체</title>
+	<style>
+		#headerbox{
+			background: black;
+			color: white;
+			padding:5px 10px 5px 10px;
+			line-height: 30px;
+			overflow: hidden;
+		}
+		.headerleft{
+			float: left;
+			padding:4px;
+			margin-top: 10px;
+			font-weight: 900;
+		}
+		.headerleft:hover{
+			background-color: white;
+			color: black;
+		}
+		.headerright{
+			margin:0 10px;
+			margin-top: 5px;
+			font-size:small;
+		}
+		.right{
+			text-align: right;
+		}
+		select {
+			width: 200px; /* 원하는 너비설정 */ 
+			padding: .8em .5em; /* 여백으로 높이 설정 */ 
+			font-family: inherit; /* 폰트 상속 */ 
+			background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */
+			border: 0.2px solid #999;  
+			-webkit-appearance: none; /* 네이티브 외형 감추기 */ 
+			-moz-appearance: none; 
+			appearance: none;			
+		}
+		ul#navi {
+		 float: left;
+       	 width: 200px;
+       	 text-indent: 10px;
+       	 border: 1px solid #567fd2;
+		}
+   		ul#navi, ul#navi ul {
+        	margin:0;
+        	padding:0;
+        	list-style:none;
+		}
+    	.group {
+        	margin-bottom: 3px;
+		}
+    	li.group div.title {
+        	height: 35px;
+        	line-height: 35px;
+        	cursor:pointer;
+		}
+    	ul.sub li {
+        	margin-bottom: 2px;
+        	height:35px;
+        	line-height:35px;
+        	cursor:pointer;
+		}
+    	ul.sub li a {
+        	display: block;
+        	width: 100%;
+        	height:100%;
+        	text-decoration:none;
+        	color:#000;
+		}
+    	ul.sub li:hover {
+        	background: white;
+		}
+		.size{
+			margin:2px 2px;
+			padding: 5px;
+			border: 0.9px solid black;
+		}
+		.centered{
+			display: table;
+			margin-left: auto;
+			margin-right:auto;
+		}
+		.size:hover{
+			border: 3px solid black;
+		}
+		.backwhite{
+			background-color: red;
+			height: 300px;
+			width:200px;
+			margin-right: 20px;
+		}
+		.bachwhite:hover{
+			border: 3px solid black;
+		}
+		.right{
+			float: right;
+			text-align: left;
+		}
+		
+	</style>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+        
+        //모든 서브 메뉴 감추기
+        $(".sub").css({display:"none"}); 
+        //$(".sub").hide(); //위코드와 동일 
+
+        $(".title").click(function(){
+            //일단 서브메뉴 다 가립니다.
+            //$(".sub").css({display:"none"});
+            
+            //열린 서브메뉴에 대해서만 가립니다.
+            $(".sub").each(function(){
+                console.log($(this).css("display"));
+                if($(this).css("display")=="block") {
+                    //$(".sub").css({display:"none"});
+                    //$(this).hide();
+                    $(this).slideUp("fast");
+                }
+            });
+
+            //현재 요소의 다음 요소를 보이게 합니다.
+            //$(this).next("ul").css({display:"block"});
+            //$(this).next("ul").show();
+            $(this).next("ul").slideDown("fast");
+
+
+        })
+    });
+</script>
+
+	
+</head>
+<body>
+	<div id="headerbox">
+		<div class="right headerright">
+			<span>주문조회 &nbsp; ｜</span>
+			<span>회원가입 &nbsp; ｜</span>
+			<span>로그인</span>
+		</div>
+		<div class="headerleft">MEN</div>
+		<div class="headerleft">WOMEN</div>
+		<div class="headerleft">KIDS&nbsp;｜</div>
+		<div class="headerleft">SPORTS</div>
+		<div class="headerleft">BRANDS&nbsp;｜</div>
+		<div class="headerleft">윈터아우터&nbsp;｜</div>
+		<div class="headerleft">런칭캘린더&nbsp;｜</div>
+		<div class="right">
+			<input type="text" value="" id="recherche">
+			<button>검색</button>
+		</div>
+	</div>
+	<h3>←BACK</h3>
+	<span style="font-size: 25px; font-weight: 900;">MEN 신발 러닝</span>
+	<br>
+	<span class="right" style="float: right">
+		<select>
+			<option>인기순</option>
+			<option>신상품</option>
+			<option>상품평순</option>
+			<option>높은가격순</option>
+			<option>낮은가격순</option>
+		</select>
+	</span>
+	<br>
+	<ul id="navi">
+		<br>
+		<li>상품분류</li>
+		<br>
+        <li class="group">
+			<hr>
+            <div class="title">신발</div>
+            <ul class="sub">
+                <li><h4><a href="#">전체보기</a></h4></li>
+                <li><h4>스포츠별</h4></li>
+                <li><a href="#">오리지널스</a></li>
+                <li><a href="#">러닝</a></li>
+                <li><a href="#">농구</a></li>
+                <li><a href="#">아웃도어</a></li>
+                <li><a href="#">축구</a></li>
+                <li><a href="#">테니스</a></li>
+                <li><a href="#">스케이트보딩</a></li>
+                <li><a href="#">트레이닝</a></li>
+                <li><a href="#">야구</a></li>
+                <li><a href="#">샌들/슬리퍼</a></li>
+                <li><a href="#">골프</a></li>
+                <li><h4>브랜드</h4></li>
+                <li><a href="#">스포츠</a></li>
+                <li><a href="#">오리지널스</a></li>
+                <li><a href="#">애슬레틱</a></li>
+            </ul>
+                <hr>
+        </li>
+        <li class="group">
+            <div class="title">의류</div>
+            <ul class="sub">
+                <li><h4><a href="#">전체보기</a></h4></li>
+                <li><h4>스포츠별</h4></li>
+                <li><a href="#">라이프스타일</a></li>
+                <li><a href="#">축구</a></li>
+                <li><a href="#">농구</a></li>
+                <li><a href="#">러닝</a></li>
+                <li><a href="#">테니스</a></li>
+                <li><a href="#">아웃도어</a></li>
+                <li><a href="#">트레이닝</a></li>
+                <li><a href="#">야구</a></li>
+                <li><a href="#">스윔</a></li>
+                <li><a href="#">스케이트보딩</a></li>
+                <li><a href="#">기타</a></li>
+                <li><a href="#">골프</a></li>
+                <li><h4>상품별</h4></li>
+                <li><a href="#">수영복</a></li>
+                <li><a href="#">자켓</a></li>
+                <li><a href="#">긴팔티셔츠</a></li>
+                <li><a href="#">반팔티셔츠</a></li>
+                <li><a href="#">민소래티셔츠</a></li>
+                <li><a href="#">언더웨어</a></li>
+                <li><a href="#">숏팬츠</a></li>
+                <li><a href="#">축구 저지</a></li>
+                <li><a href="#">트랙탑</a></li>
+                <li><a href="#">팬츠/타이즈</a></li>
+                <li><a href="#">후디/스웨트셔츠</a></li>
+                <li><h4>브랜드</h4></li>
+                <li><a href="#">스포츠</a></li>
+                <li><a href="#">오리지널스</a></li>
+                <li><a href="#">애슬레틱</a></li>
+            </ul>
+        </li>
+        <li class="group">
+            <div class="title">용퓸</div>
+            <ul class="sub">
+                <li><h4><a href="#">전체보기</a></h4></li>
+                <li><h4>상품별</h4></li>
+                <li><a href="#">양말</a></li>                
+                <li><a href="#">모자</a></li>    
+                <li><a href="#">가방</a></li>    
+                <li><a href="#">벨트</a></li>    
+                <li><a href="#">수건/우산/물병</a></li>    
+                <li><a href="#">장갑</a></li>    
+                <li><a href="#">피트니스 용품</a></li>    
+                <li><a href="#">공</a></li>    
+                <li><h3>브랜드</h3></li>
+                <li><a href="#">스포츠</a></li>
+                <li><a href="#">오리지널스</a></li>
+                <li><a href="#">애슬레틱</a></li>
+            </ul>
+        </li>
+   	 	<li style="font-weight: 900">FILTER</li>
+		<li class="group">
+   	 		<hr>
+			<div class="title">사이즈 : 신발</div>
+			<div class="centered">
+				<br>
+				<span class="size">&nbsp;245&nbsp;</span>
+				<span class="size">&nbsp;250&nbsp;</span>
+				<span class="size">&nbsp;255&nbsp;</span>
+				<br>
+				<br>
+				<span class="size">&nbsp;260&nbsp;</span>
+				<span class="size">&nbsp;265&nbsp;</span>
+				<span class="size">&nbsp;270&nbsp;</span>
+				<br>
+				<br>
+				<span class="size">&nbsp;275&nbsp;</span>
+				<span class="size">&nbsp;280&nbsp;</span>
+				<span class="size">&nbsp;285&nbsp;</span>
+				<br>
+				<br>
+				<span class="size">&nbsp;290&nbsp;</span>
+				<span class="size">&nbsp;295&nbsp;</span>
+				<span class="size">&nbsp;300&nbsp;</span>
+				<br>
+				<br>
+				<hr>
+			</div>
+		</li>
+		<li class="group">
+			<div class="title">컬러</div>
+		</li>
+		<li class="group">
+			<div class="title">가격</div>
+			<input type="checkbox" id="50000">
+			<label for="50000">50,000미만</label><br>
+			<input type="checkbox" id="100000">
+			<label for="100000">50,000~100,000</label><br>
+			<input type="checkbox" id="200000">
+			<label for="200000">100,000~200,000</label><br>
+			<input type="checkbox" id="more">
+			<label for="more">200,000초과</label>
+			<br>
+			<hr>
+		</li>
+		<li>
+			<br>
+			<input type="checkbox" id="품절제외">
+			<label for="품절제외">품절제외</label>
+			<br>
+			<input type="checkbox" id="가격인하">
+			<label for="가격인하">가격인하</label>
+			<br>
+			<input type="checkbox" id="출시예정">
+			<label for="출시예정">출시예정</label>
+			<br>
+			<br>
+		</li>
+    </ul>
+    <div class="backwhite right">
+    	<img src="https://6900637.fls.doubleclick.net/activityi;src=6900637;type=products;cat=prdlst;u1=;u4=;u9=adidas;u11=;u12=;u16=;u20=;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1;num=4674547015424.602?">
+    	<h4>인기</h4>
+    	<h4>울트라부스트 20</h4>
+    </div>
+</body>
+</html>

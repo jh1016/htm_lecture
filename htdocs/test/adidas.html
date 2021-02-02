@@ -6,7 +6,7 @@
 		#headerbox{
 			background: black;
 			color: white;
-			padding:5px 10px 5px 10px;
+			padding:10px 10px 5px 10px;
 			line-height: 30px;
 			overflow: hidden;
 		}
@@ -87,18 +87,29 @@
 			border: 3px solid black;
 		}
 		.backwhite{
-			background-color: red;
-			height: 300px;
-			width:200px;
-			margin-right: 20px;
+			background-color: white;
+			height: 430px;
+			width:238px;
+			margin-left: 20px;
+			margin-top: 10px;
 		}
-		.bachwhite:hover{
-			border: 3px solid black;
+		.backwhite:hover{
+			border: 1.6px solid black;
 		}
 		.right{
 			float: right;
 			text-align: left;
 		}
+		#section{
+			margin-left:10px;
+		}
+		.backwhite h5{
+			color: skyblue
+		}
+		.backwhite h4{
+			color: red
+		}
+		
 		
 	</style>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
@@ -142,6 +153,9 @@
 			<span>회원가입 &nbsp; ｜</span>
 			<span>로그인</span>
 		</div>
+		<br>
+		<img class="headerleft" src="data:image/png;base64,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" width="70" height="60">
+		<br>
 		<div class="headerleft">MEN</div>
 		<div class="headerleft">WOMEN</div>
 		<div class="headerleft">KIDS&nbsp;｜</div>
@@ -166,6 +180,8 @@
 			<option>낮은가격순</option>
 		</select>
 	</span>
+	<br>
+	<br>
 	<br>
 	<ul id="navi">
 		<br>
@@ -229,6 +245,7 @@
                 <li><a href="#">오리지널스</a></li>
                 <li><a href="#">애슬레틱</a></li>
             </ul>
+            <hr>
         </li>
         <li class="group">
             <div class="title">용퓸</div>
@@ -248,6 +265,7 @@
                 <li><a href="#">오리지널스</a></li>
                 <li><a href="#">애슬레틱</a></li>
             </ul>
+            <hr>
         </li>
    	 	<li style="font-weight: 900">FILTER</li>
 		<li class="group">
@@ -280,6 +298,9 @@
 		</li>
 		<li class="group">
 			<div class="title">컬러</div>
+			<br>
+			<br>
+			<hr>
 		</li>
 		<li class="group">
 			<div class="title">가격</div>
@@ -308,10 +329,65 @@
 			<br>
 		</li>
     </ul>
+    <div id="section" style="display: flex">
     <div class="backwhite right">
-    	<img src="https://6900637.fls.doubleclick.net/activityi;src=6900637;type=products;cat=prdlst;u1=;u4=;u9=adidas;u11=;u12=;u16=;u20=;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1;num=4674547015424.602?">
-    	<h4>인기</h4>
-    	<h4>울트라부스트 20</h4>
+    	<img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_2303450%2F23034500133.jpg&type=a340" width="238" height="240">
+    	<h5>인기</h5>
+    	<p>울트라부스트 20</p>
+    	<small>RUNNING</small>
+    	<h4>153,300원</h4>
+    </div>
+    <div class="backwhite right">
+    	<img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_2530277%2F25302776500.jpg&type=a340" width="238" height="240">
+    	<h5>인기</h5>
+    	<p>알파바운스1</p>
+    	<small>RUNNING</small>
+    	<h4>76,300원</h4>
+    </div>
+    <div class="backwhite right">
+    	<img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_8202671%2F82026713559.jpg&type=a340" width="238" height="240">
+    	<h5>인기</h5>
+    	<p>울트라부스트</p>
+    	<small>RUNNING</small>
+    	<h4>139,300원</h4>
+    </div>
+    <div class="backwhite right">
+    	<img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_8281941%2F82819419646.jpg&type=a340" width="238" height="240">
+    	<h5>인기</h5>
+    	<p>이큅먼트 10 U</p>
+    	<small>RUNNING</small>
+    	<h4>76,300원</h4>
+    </div>
+    </div>
+    <div style="display: flex">
+    <div class="backwhite right">
+    	<img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_8245163%2F82451633852.jpg&type=a340" width="238" height="240">
+    	<h5>인기</h5>
+    	<p>울트라버스트 20</p>
+    	<small>RUNNING</small>
+    	<h4 style="color: black">219,000원</h4>
+    </div>
+    <div class="backwhite right">
+    	<img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_8249496%2F82494968247.jpg&type=a340" width="238" height="240">
+    	<h5>인기</h5>
+    	<p>[제니 운동화]울트라버스트</p>
+    	<small>RUNNING</small>
+    	<h4 style="color: black">199,000원</h4>
+    </div>
+    <div class="backwhite right">
+    	<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fshopping.phinf.naver.net%2Fmain_2518981%2F25189815957.20201211200909.jpg&type=a340" width="238" height="240">
+    	<h5>인기</h5>
+    	<p>울트라부스트DNAX디즈니</p>
+    	<small>RUNNING</small>
+    	<h4>139,000원</h4>
+    </div>
+    <div class="backwhite right">
+    	<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fshopping.phinf.naver.net%2Fmain_2552783%2F25527839424.20210107234229.jpg&type=a340" width="238" height="240">
+    	<h5>인기</h5>
+    	<p>울트라부스트M</p>
+    	<small>RUNNING</small>
+    	<h4>139,300원</h4>
+    </div>
     </div>
 </body>
 </html>
